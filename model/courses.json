@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "courseName": "SMM"
+    },
+    {
+        "id": 2,
+        "courseName": "Graphic design"
+    },
+    {
+        "id": 3,
+        "courseName": "Web Development"
+    },
+    {
+        "id": 4,
+        "courseName": "UX/UI"
+    },
+    {
+        "id": 5,
+        "courseName": "Gaming Development"
+    },
+    {
+        "id": 6,
+        "courseName": "AI"
+    }
+]

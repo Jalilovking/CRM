@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "username": "nt071",
+        "course": "1",
+        "teacher": "5"
+    },
+    {
+        "id": 2,
+        "username": "nt072",
+        "course": "6",
+        "teacher": "6"
+    },
+    {
+        "id": 3,
+        "username": "nt073",
+        "course": "5",
+        "teacher": "6"
+    },
+    {
+        "id": 4,
+        "username": "nt099",
+        "course": "2",
+        "teacher": "5"
+    }
+]

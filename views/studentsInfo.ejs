@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> 
+       
+</head>
+
+<body id="body-pd" class="body-pd">
+    
+    
+    
+    <header class="header body-pd" id="header">
+        <h1>Students</h1>
+    </header>
+    
+    
+    <div class="l-navbar show" id="nav-bar">
+        <nav class="nav">
+            <div> 
+                <a href="/admin" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">BBBootstrap</span> </a>
+                
+                <div class="nav_list"> 
+                    <a href="/admin" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Dashboard</span> </a> 
+                    <a href="./studentsInfo" class="nav_link active"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Students</span> </a> 
+                    <a href="./teachersInfo" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Teachers</span> </a> 
+                    <a href="./groupsInfo" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Groups</span> </a> 
+                    <a href="./courseInfo" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Courses</span> </a> 
+                </div>
+            </div> 
+            <a href="/logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+        </nav>
+    </div>
+    
+    
+    <!--Container Main start-->
+    <div class="height-100 bg-light" style="height: 90vh;">
+        
+        <h2>List of students</h2>
+        
+        
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone number</th>
+                        <th scope="col">Group</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i of allStudents) { %>
+                    <tr>
+                        <th scope="row"><%= count++ %></th>
+                        <td><%= i.username %></td>
+                        <td><%= i.phoneNumber %></td>
+                        <td><%= allGroups.find(e => e.id == i.group).username %></td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+            
+            <div class="modal">
+                <div class="modal__wrapper">
+                    <form action="/addStudent" method="post" enctype="application/x-www-form-urlencoded">
+                        <label class="form-label" for="phoneNumber">Phone number</label>
+                        <input class="form-control" id="phoneNumber" type="tel" name="phoneNumber" placeholder="Phone number" required>
+                        <label class="form-label" for="username">Name</label>
+                        <input class="form-control" id="username" type="text" name="username" placeholder="Name" required> 
+                        <label class="form-label" for="group">Choose group</label>
+                        <select class="form-select" name="group" id="group" required>
+                            <option disabled selected value="none" >Choose group</option>
+                            <% for (let i of allGroups) { %>
+                                <option value=<%= i.id %> ><%= i.username %></option>
+                                
+                                <% } %>
+                            </select>
+                            <label class="form-label" for="birthday">Birthday</label><br>
+                            <input type="date" id="birthday" name="birthday" required><br>
+                            <label class="form-label" for="gender">Gender</label>
+                            <div id="gender" class="form-check">
+                                <input id="man" type="radio" name="gender" value="man">
+                                <label for="man">Man</label>
+                                <input id="woman" type="radio" name="gender" value="woman">
+                                <label for="woman">Woman</label>
+                            </div>
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" id="password" type="password" name="password" placeholder="Password" required><br>
+                            <button class="btn btn-primary mb-3" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    </html>

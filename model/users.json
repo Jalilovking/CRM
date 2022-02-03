@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "username": "Ali",
+        "password": 123,
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "username": "Aziz",
+        "password": 345,
+        "role": "teacher",
+        "course": 1,
+        "gender": "man",
+        "phoneNumber": "+998991234666"
+    },
+    {
+        "id": 3,
+        "username": "Bobur",
+        "password": "123",
+        "phoneNumber": "+998991234567",
+        "gender": "man",
+        "group": "1",
+        "role": "student"
+    },
+    {
+        "id": 4,
+        "username": "Laziza",
+        "password": "1",
+        "phoneNumber": "+998991234577",
+        "gender": "woman",
+        "group": "3",
+        "role": "student"
+    },
+    {
+        "id": 5,
+        "username": "Kamol",
+        "password": "1",
+        "course": "2",
+        "phoneNumber": "+998991234560",
+        "gender": "man",
+        "role": "teacher"
+    },
+    {
+        "id": 6,
+        "username": "Aziza",
+        "password": "1",
+        "course": "6",
+        "phoneNumber": "+998991234562",
+        "gender": "woman",
+        "role": "teacher"
+    },
+    {
+        "id": 7,
+        "username": "Davron",
+        "password": "1",
+        "phoneNumber": "+998991234577",
+        "gender": "man",
+        "group": "1",
+        "role": "student"
+    }
+]
